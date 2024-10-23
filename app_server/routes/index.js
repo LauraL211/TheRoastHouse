@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const ctrlLocations = require('../controllers/locations'); 
-const ctrlOthers = require('../controllers/others');
+const ctrlRegistration = require('../controllers/registration'); 
+const ctrlRecipe = require('../controllers/recipe');
 
 
-/* Locations pages */
-router.get('/loginPage', ctrlLocations.loginPage);
-router.get('/signup', ctrlLocations.signup);
-router.get('/recipePage', ctrlLocations.recipePage);
-/* Other pages */
-router.get('/about', ctrlOthers.about);
+/* Registration pages */
+router.get('/loginPage', ctrlRegistration.loginPage);
+router.get('/signup', ctrlRegistration.signup);
+
+/* Recipe Home pages */
+router.get('/recipeHome', ctrlRecipe.recipeHome);
 module.exports = router;
 
 
