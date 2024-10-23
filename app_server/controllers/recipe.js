@@ -1,6 +1,6 @@
 /*  recipe home page */
 const recipeHome = function(req, res){
-    res.render('index', { title: 'Recipe Home Page' });
+    res.render('recipeHomePage', { title: 'Recipe Home Page' });
   };
   
   module.exports = {
