@@ -12,11 +12,13 @@
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #ffffff;
-  background-color: #108a93;
+  background-color: #f5d0c1;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
+  font-size: 60px;
+  color: #38002c;
 }
 
 .navbar {
@@ -101,12 +103,13 @@ body {
 }
 
 .sidenav {
-  height: 100%;
+  height: 120%;
   background-color: #000;
   overflow-x: hidden;
   padding-top: 20px;
-  color: #000;
-  background-image: url("https://img.freepik.com/free-vector/abstract-colorful-pattern-background_1035-13407.jpg");
+  color: #38002c;
+  font-size: 30px;
+  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcNDQ0NDQ0HBw0NDQ0NDQcHDQ8NDQ0NFREWFhURFRUYHSggGBolGxUTITEhMSkrLi4uFx8/OD8tNygtLisBCgoKDQ0NDw0NDisZFRk3Kys3KysrKysrKysrKysrKysrKysrNysrKysrLSsrKystKysrKystNy0rKystKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAAIFBv/EABUQAQEAAAAAAAAAAAAAAAAAAAAB/8QAGgEBAQEBAQEBAAAAAAAAAAAAAgEABgUDBP/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwD06SfmdckkzJJMxMBSoUiFQpEKKKIVEUQqJREahiRCoiiFRFEaiIIUSQXzqFIwaiKMCoijAqIpDUJBCi4SSdW9NJJmRBaoYQQqJoQhURRGoiiFRFIKihUIUUURqIohURRCoiIQqFIhUUKIVEURooohURBCoUiCOCknWvTSSZiQRqFIwahSIUUUQqIohUSiI1DCCFRFEKiKIVEUgokghUKRGoijAqIohURSGoSCFEpEKjgJJ1z1EQWQkEKhIIVEURqIohURSCooUQokghURRGoiiFRFIKhIIVEUQqIojRRRgVEUgqEghURRCo8+knYPUJgI1CQRqFIhRRRCoiiFRKIjUMIIVE0CFRFEKKKIVEQQqFIwaiKIVFCiFRFEaiIL50SQRqFIhUeeILsa9QwghUJEIVEUQqIojURSCio0CFQpEKhSI1EUQqIpBUJBCoioQooxEKiKI1EUgqEghUJBCoiiNF54wF2FeqSCFEpEaiKIVEUQqJREahIIVCQQooohURRCoiCFQpEaiKIVEUQqIojRRBfOoSCNQpEKiKQo8/CC7CvUJEIVEUQqIojURSCiYYIQqEghUKRGoiiFRFIKhIIVCQQopoEKiKI1EUgqEghUJBCoSCApJMzgGAuur0zEiNRFEKiKIVEYCFQkEahIIUUVCFRFEKiIIVCkRqFIhUKRCoiiFFEEKhII1CkQqFJCiSTM4JBdbXpoohUUKI1EUgomEEKhIIVDEjAqIojURSCoSDAqEghRJBCoiiNRFEKihBCoSCFQkEBSSZkkmZwkk6yvSJSCoSkFQmJDUJSCoSEFElIKxKQUSUgqEhDUaIQVGkkFQkoaiMSfOiSENRopBUKSFEkmZJJmf//Z");
 }
 
 
@@ -135,10 +138,12 @@ body {
 
   .sidenav{
       width: 40%;
+      height: 200%;
       position: fixed;
       z-index: 1;
       top: 0;
       left: 0;
+      color: #38002c;
   }
 
   .login-form{
@@ -154,7 +159,7 @@ body {
 .login-main-text{
   margin-top: 20%;
   padding: 60px;
-  color: #fff;
+  color: #38002c;
 }
 
 .login-main-text h2{
