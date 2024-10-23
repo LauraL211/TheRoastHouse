@@ -104,12 +104,11 @@ body {
 
 .sidenav {
   height: 120%;
-  background-color: #000;
   overflow-x: hidden;
   padding-top: 20px;
   color: #38002c;
   font-size: 30px;
-  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcNDQ0NDQ0HBw0NDQ0NDQcHDQ8NDQ0NFREWFhURFRUYHSggGBolGxUTITEhMSkrLi4uFx8/OD8tNygtLisBCgoKDQ0NDw0NDisZFRk3Kys3KysrKysrKysrKysrKysrKysrNysrKysrLSsrKystKysrKystNy0rKystKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAABAAIFBv/EABUQAQEAAAAAAAAAAAAAAAAAAAAB/8QAGgEBAQEBAQEBAAAAAAAAAAAAAgEABgUDBP/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwD06SfmdckkzJJMxMBSoUiFQpEKKKIVEUQqJREahiRCoiiFRFEaiIIUSQXzqFIwaiKMCoijAqIpDUJBCi4SSdW9NJJmRBaoYQQqJoQhURRGoiiFRFIKihUIUUURqIohURRCoiIQqFIhUUKIVEURooohURBCoUiCOCknWvTSSZiQRqFIwahSIUUUQqIohUSiI1DCCFRFEKiKIVEUgokghUKRGoijAqIohURSGoSCFEpEKjgJJ1z1EQWQkEKhIIVEURqIohURSCooUQokghURRGoiiFRFIKhIIVEUQqIojRRRgVEUgqEghURRCo8+knYPUJgI1CQRqFIhRRRCoiiFRKIjUMIIVE0CFRFEKKKIVEQQqFIwaiKIVFCiFRFEaiIL50SQRqFIhUeeILsa9QwghUJEIVEUQqIojURSCio0CFQpEKhSI1EUQqIpBUJBCoioQooxEKiKI1EUgqEghUJBCoiiNF54wF2FeqSCFEpEaiKIVEUQqJREahIIVCQQooohURRCoiCFQpEaiKIVEUQqIojRRBfOoSCNQpEKiKQo8/CC7CvUJEIVEUQqIojURSCiYYIQqEghUKRGoiiFRFIKhIIVCQQopoEKiKI1EUgqEghUJBCoSCApJMzgGAuur0zEiNRFEKiKIVEYCFQkEahIIUUVCFRFEKiIIVCkRqFIhUKRCoiiFFEEKhII1CkQqFJCiSTM4JBdbXpoohUUKI1EUgomEEKhIIVDEjAqIojURSCoSDAqEghRJBCoiiNRFEKihBCoSCFQkEBSSZkkmZwkk6yvSJSCoSkFQmJDUJSCoSEFElIKxKQUSUgqEhDUaIQVGkkFQkoaiMSfOiSENRopBUKSFEkmZJJmf//Z");
+  background-image: url("../images/BackgroundForSidebar.jpg");
 }
 
 
@@ -169,4 +168,23 @@ body {
 .btn-black{
   background-color: #000 !important;
   color: #fff;
+}
+
+.social-card-header{
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 96px;
+}
+.social-card-header i {
+  font-size: 32px;
+  color:#FFF;
+}
+.share:hover {
+      text-decoration: none;
+  opacity: 0.8;
 }

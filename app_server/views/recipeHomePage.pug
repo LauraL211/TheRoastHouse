@@ -1,5 +1,24 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h3.mt-3.pb-3.mb-4.font-italic.border-bottom
+      | Recipes
+    .row
+      .col-md-4
+        .card
+          img.card-img-top(src='images/ChcickenCurry.jpg' alt='Chicken Curry')
+          .card-body
+            h5.card-title.border-bottom.pb-3
+              | Chicken Curry
+              a.float-right.d-inline-flex.share(href='#')
+            p.card-text
+              | Time: 1 hour 20 mins
+              br
+              |  Serves: 4 people 
+              br
+              |  Difficulty: &starf;&starf;&starf;&star;&star;
+            a.float-right(href='#')
+              | Try it out... 
+              i.fas.fa-angle-double-right
+    hr
