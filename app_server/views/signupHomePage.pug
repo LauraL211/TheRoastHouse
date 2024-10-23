@@ -1,0 +1,24 @@
+extends layout 
+
+block content
+ 
+ 
+  .sidenav
+    .login-main-text
+      h2
+        | The Roast House
+        br
+        |  Sign-Up Page
+      p Register with us today :D
+  .main
+    .col-md-6.col-sm-12
+      .login-form
+        form
+          .form-group
+            label User Name
+            input.form-control(type='text', placeholder='User Name')
+          .form-group
+          label Password
+          input.form-control(type='password', placeholder='Password')
+      br
+      button.btn.btn-black(type='submit') Register

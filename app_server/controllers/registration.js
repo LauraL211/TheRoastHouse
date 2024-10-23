@@ -4,7 +4,7 @@ const loginPage = function(req, res){
     };
     /* GET Sign-Up page */
     const signup = function(req, res){
-    res.render('index', { title: 'Sign-Up' });
+    res.render('signupHomePage', { title: 'Sign-Up' });
     };
     
     module.exports = {
