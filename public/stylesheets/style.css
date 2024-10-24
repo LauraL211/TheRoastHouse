@@ -20,7 +20,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
-  font-size: 60px;
+  font-size: 90px;
   color: #38002c;
 }
 
@@ -97,6 +97,9 @@ body {
  
 }
 
+.sidenav.h2{
+  font-size: 60px;
+}
 .sidenav {
   height: 120%;
   overflow-x: hidden;
