@@ -1,4 +1,11 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+.recipe-background {
+  background-image: "public/images/BackgroundForSidebar.jpg";
+  background-size: cover;
+  background-repeat: no-repeat ;
+  background-position: center;
+  min-height: 100vh;
+}
 
 .flex-column {
   display: flex;
