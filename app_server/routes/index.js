@@ -6,11 +6,11 @@ const ctrlRecipe = require('../controllers/recipe');
 
 
 /* Registration pages */
-router.get('/loginPage', ctrlRegistration.loginPage);
-router.get('/signup', ctrlRegistration.signup);
+router.get('/', ctrlRegistration.loginPage);
+router.get('/SignUpPage', ctrlRegistration.signup);
 
 /* Recipe Home pages */
-router.get('/recipeHome', ctrlRecipe.recipeHome);
+router.get('/HomePage', ctrlRecipe.recipeHome);
 module.exports = router;
 
 
