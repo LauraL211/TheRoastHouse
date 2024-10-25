@@ -3,7 +3,7 @@ const recipeHome = function(req, res){
     res.render('recipeHomePage', 
       { title: 'Recipe Home Page' , pageHeader: {
       title: 'The Roast House', 
-      strapline: 'Find new recipes to try out'} ,
+      strapline: 'Where culinary inspiration comes to you!'} ,
       recipes: [
       { 
         Name: 'Chicken Curry',
