@@ -1,15 +1,58 @@
 extends layout
 
 block content
-  .sidenav 
-      .login-main-text
-        h2=pageHeader.title
-        p=pageHeader.strapline
-  .main
-    .recipe-background
-      each recipe in recipeHome
-        .card 
-          .card-block
-            a(href="/HomePage")= recipes.name
+  .row.banner
+    .col-12
+      h1 The Roast House
+        small &nbsp;Where culinary inspiration comes to you!
+  .row
+    .col-12.col-md-8
+
+      .card
+        .card-block
+          .card-image
+              img(src='public/images/chickencurry.jpg', alt='Chicken Curry')
+          h4 Chicken Curry
+          p Time: 80 mins 
+          p Serves: 4 People 
+          p Difficulty: Easy
             
+
+      .card
+        .card-block
+          .card-image
+              img(src='public/images/chickencurry.jpg', alt='Chicken Curry')
+          h4 Chicken Curry
+          p Time: 80 mins 
+          p Serves: 4 People 
+          p Difficulty: Easy
+
+      .card
+        .card-block
+          .card-image
+              img(src='public/images/chickencurry.jpg', alt='Chicken Curry')
+          h4 Chicken Curry
+          p Time: 80 mins 
+          p Serves: 4 People 
+          p Difficulty: Easy
+
+      .card
+        .card-block
+          .card-image
+              img(src='public/images/chickencurry.jpg', alt='Chicken Curry')
+          h4 Chicken Curry
+          p Time: 80 mins 
+          p Serves: 4 People 
+          p Difficulty: Easy
+
+      .card
+        .card-block
+          .card-image
+              img(src='public/images/chickencurry.jpg', alt='Chicken Curry')
+          h4 Chicken Curry
+          p Time: 80 mins 
+          p Serves: 4 People 
+          p Difficulty: Easy
           
+    .col-12.col-md-4
+      p.lead Maybe you need something quick to whip up for dinner? <br><br> Or maybe you want to tackle Gordon Ramsay for best chef title? <br><br> The Roast House has you covered.
