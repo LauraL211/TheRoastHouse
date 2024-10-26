@@ -12,7 +12,13 @@ mongoose.connect(
 }
  catch (e) {
   console.log("could not connect");
-}
+}//require('./locations');
 
-require('./recipe');
+const recipeSchema = new mongoose.Schema({
+  Name: String,
+  Time: String,
+  Serves: String,
+  Difficulty: String
+});
 
+mongoose.model('Recipe', recipeSchema);
