@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const dbURI = "mongodb+srv://lollylooney:Gads1858@cluster0.2sjgu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const dbURI = "mongodb+srv://lollylooney:Gads1858@cluster0.2sjgu.mongodb.net/?retryWrites=true&w=majority&appName=TheRoastHouse";
 
 try {
    
@@ -12,5 +12,7 @@ mongoose.connect(
 }
  catch (e) {
   console.log("could not connect");
-}//require('./locations');
+}
+
+require('./recipe');
 

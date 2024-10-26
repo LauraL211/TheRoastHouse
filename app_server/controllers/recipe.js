@@ -1,4 +1,12 @@
-/*  recipe home page */
+const recipeSchema = new mongoose.Schema({
+        Name: String,
+        Time: String,
+        Serves: String,
+        Difficulty: String
+ });
+
+ mongoose.model('Recipe', recipeSchema);
+
 const recipeHome = function(req, res){
     res.render('recipeHomePage', 
       { title: 'Recipe Home Page' , pageHeader: {
