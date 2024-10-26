@@ -5,18 +5,20 @@ block content
     .col-12
       h2=pageHeader.title
       p=pageHeader.strapline
+
   .main
     .col-md-6.col-sm-12
       .login-form
-        form
+        form#registrationForm
           .form-group
             label Full Name
-            input.form-control(type='text', placeholder='Enter your Full Name')
+            input#fullName.form-control(type='text', placeholder='Enter your Full Name')
           .form-group
             label User Name
-            input.form-control(type='text', placeholder='Enter your Username')
+            input#userName.form-control(type='text', placeholder='Enter your Username')
           .form-group
-          label Password
-          input.form-control(type='password', placeholder='Enter your Password')
+            label Password
+            input#password.form-control(type='password', placeholder='Enter your Password')
+          p#error-message(style='color:red; display:none') Please fill in all fields before registering.
       br
-      button.btn.btn-black(type='submit') Register
+      a.btn.btn-black(href='/HomePage') Register
