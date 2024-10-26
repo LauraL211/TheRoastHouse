@@ -9,16 +9,15 @@ block content
   .main
     .col-md-6.col-sm-12
       .login-form
-        form#registrationForm
+        form
           .form-group
             label Full Name
-            input#fullName.form-control(type='text', placeholder='Enter your Full Name')
+            input.form-control(type='text', placeholder='Enter your Full Name')
           .form-group
             label User Name
-            input#userName.form-control(type='text', placeholder='Enter your Username')
+            input.form-control(type='text', placeholder='Enter your Username')
           .form-group
             label Password
-            input#password.form-control(type='password', placeholder='Enter your Password')
-          p#error-message(style='color:red; display:none') Please fill in all fields before registering.
+            input.form-control(type='password', placeholder='Enter your Password')
       br
       a.btn.btn-black(href='/HomePage') Register
