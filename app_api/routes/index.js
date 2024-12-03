@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
+const recipeController = require('../controllers/recipe');
+const registrationController = require('../controllers/registration');  // Add this import
 
-const ctrlRegistration = require('../controllers/registration'); 
-const ctrlRecipe = require('../controllers/recipe');
+//Recipes
+router
+    .route('/recipes')
+    .get(recipeController.recipeReadAll)
+    .post(recipeController.recipeCreate);
 
-// Registration routes (POST requests)
-router.post('/login', ctrlRegistration.login);  // POST for Login
-router.post('/signup', ctrlRegistration.signup); // POST for Sign-Up
+//Registration
+router
+    .route('/register')
+    .post(registrationController.registrationCreate);
 
-// Recipe routes (GET requests)
-router.get('/HomePage', ctrlRecipe.recipeHome); 
-router.get('/HomePage/recipes', ctrlRecipe.recipeReadAll); 
-router.get('/HomePage/:ObjectId', ctrlRecipe.recipeReadOne);
-
+router
+    .route('/')
+    .get(recipeController.recipeReadAll)
 module.exports = router;

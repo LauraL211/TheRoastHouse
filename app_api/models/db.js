@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-
-const dbURI = "mongodb+srv://lollylooney:Gads1858@cluster0.2sjgu.mongodb.net/TheRoastHouse?retryWrites=true&w=majority";
+let dbURI = "mongodb+srv://lollylooney:Gads1858@cluster0.2sjgu.mongodb.net/TheRoastHouse?retryWrites=true&w=majority";
 
 // Connect to MongoDB
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbURI)
     .then(() => {
         console.log("Mongoose is connected");
     })
@@ -11,23 +10,40 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         console.error("Connection error:", err);
     });
 
-// Define the Recipe schema
-const recipeSchema = new mongoose.Schema({
-    Name: { type: String, required: true },
-    Time: String,
-    Serves: String,
-    Difficulty: String
+mongoose.connection.on('connected', () => 
+  {console.log(`Mongoose connected to ${dbURI}`);});
+
+mongoose.connection.on('error', err => 
+  {console.log('Mongoose connected error:', err);});
+
+mongoose.connection.on('disconnected', () => 
+  {console.log('Mongoose disconnected');});
+
+const gracefulShutdown = (msg, callback) => {
+  mongoose.connection.close( () => {
+  console.log(`Mongoose disconnected through ${msg}`);
+  callback;
+});
+};
+
+process.once('SIGUSR2', () => {
+  gracefulShutdown('nodemon restart', () => {
+    process.kill(process.pid, 'SIGUSR2');
+  });
 });
 
-// Define the Registration Schema
-const registrationSchema = new mongoose.Schema({
-  FullName: { type: String, required: true },
-  username: String,
-  password: String
+process.on('SIGINT', () => {
+  gracefulShutdown('app termination', () => {
+    process.exit(0);
+  });
 });
 
-// Register and export the Recipe model
-mongoose.model('recipe', recipeSchema);
-mongoose.model('registration', registrationSchema);
+process.on('SIGTERM', () => {
+  gracefulShutdown('Heroku app shutdown', () => {
+    process.exit(0);
+  });
+});
+
+require('./schema');
 
 module.exports = mongoose; 

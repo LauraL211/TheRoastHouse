@@ -25,8 +25,20 @@ const signup = function(req, res) {
     res.status(200).json({"status": "success"});
 };
 
+const registrationCreate = function(req, res) {
+  Registration.create({
+    FullName: req.body.FullName,
+    username: req.body.username,
+    password: req.body.password
+  }).then(registration => {
+    res.status(201).json(registration);
+  }).catch(err => {
+    res.status(400).json(err);
+  });
+};
 
 module.exports = {
   login,
-  signup
+  signup,
+  registrationCreate
 };

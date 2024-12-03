@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { render } = require('../../app');
 const Recipe = mongoose.model('recipe');
 
 // Function for recipeHome
@@ -11,7 +12,9 @@ const recipeHome = (req, res) => {
 const recipeReadAll = function (req, res) {
   Recipe.find()
     .then((recipes) => {
-      res.status(200).json(recipes); // Send the list of recipes back in the response
+      res.render('recipeHomePage', {title: 'Recipe Home Page' , pageHeader: {
+        title: 'The Roast House', 
+        strapline: 'Where culinary inspiration comes to you!'} , recipes: recipes })
     })
     .catch((err) => {
       res.status(500).json({ message: 'Error retrieving recipes', error: err });
@@ -33,9 +36,13 @@ const recipeReadOne = function (req, res) {
     });
 };
 
+const recipeCreate = function (req, res) {
+  return res.status(200)
+}
 // Export functions
 module.exports = {
   recipeHome,
   recipeReadOne, // Export the function for reading a single recipe
   recipeReadAll, // Export the function for reading all recipes
+  recipeCreate
 };
