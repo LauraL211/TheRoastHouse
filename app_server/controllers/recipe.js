@@ -1,3 +1,46 @@
+const { response } = require('express');
+const request = require('request');
+const apiOptions = 
+  {
+    server : 'http://localhost:3000'
+  };
+
+if(process.env.NODE_ENV === 'production')
+  {
+    apiOptions.server = 'https://theroasthouse.onrender.com';
+  }
+
+const _renderHomepage = function(req, res)
+  {
+    res.render('recipeHomePage', 
+      { title: 'Recipe Home Page' , pageHeader: {
+      title: 'The Roast House', 
+      strapline: 'Where culinary inspiration comes to you!'} ,
+      recipes: responseBody
+    });
+  };
+
+  const homelist = function(req, res)
+  { 
+    const path = '/api/recipes';
+    const requestOptions = 
+    {
+      url : apiOptions.server + path,
+      method : 'GET',
+      json : {},
+      gs :  {
+              lng : -0.9690884,
+              lat : 51.455041,
+              maxDistance : 20
+            }
+    };
+    request(requestOptions, (err, response, body) =>
+            {
+              _renderHomepage(req, res);
+            }
+           );
+  };
+
 const recipeHome = function(req, res){
     res.render('recipeHomePage', 
       { title: 'Recipe Home Page' , pageHeader: {
