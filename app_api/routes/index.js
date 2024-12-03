@@ -1,20 +1,23 @@
 const express = require('express');
 const router = express.Router();
 const recipeController = require('../controllers/recipe');
-const registrationController = require('../controllers/registration');  // Add this import
+const registrationController = require('../controllers/registration');
 
 //Recipes
 router
-    .route('/recipes')
+    .route('/HomePage')
     .get(recipeController.recipeReadAll)
     .post(recipeController.recipeCreate);
 
 //Registration
 router
-    .route('/register')
+    .route('/SignUpPage')
+    .get(registrationController.signup)
     .post(registrationController.registrationCreate);
 
+//Login
 router
     .route('/')
-    .get(recipeController.recipeReadAll)
+    .get(registrationController.loginPage)
+
 module.exports = router;

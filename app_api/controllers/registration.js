@@ -3,6 +3,10 @@ const Registration = mongoose.model('registration');
 
 // Login route
 const login = function(req, res) {
+  res.render('loginHomePage', { title: 'Login Page' , pageHeader: {
+    title: 'The Roast House', strapline: 'Where culinary inspiration comes to you!'
+}});
+
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).json({ message: "Username and password are required" });
@@ -21,9 +25,11 @@ const login = function(req, res) {
 };
 
 // Sign-up route
-const signup = function(req, res) {
-    res.status(200).json({"status": "success"});
-};
+const signup = function(req, res){
+  res.render('signupHomePage', { title: 'Sign-Up' , pageHeader: {
+      title: 'The Roast House', strapline: 'Where culinary inspiration comes to you!'
+  }});
+  };
 
 const registrationCreate = function(req, res) {
   Registration.create({
@@ -37,8 +43,15 @@ const registrationCreate = function(req, res) {
   });
 };
 
+const loginPage = function(req, res){
+  res.render('loginHomePage', { title: 'Login Page' , pageHeader: {
+      title: 'The Roast House', strapline: 'Where culinary inspiration comes to you!'
+  }});
+  };
+
 module.exports = {
   login,
+  loginPage,
   signup,
   registrationCreate
 };
